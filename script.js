@@ -65,4 +65,33 @@ document.getElementById("infoPanel").innerHTML = `
 </ul>
 `
 
+
+}
+
+window.onload = function(){
+
+const hash = window.location.hash
+
+// fullscreen mode
+function fullscreenModel(){
+document.getElementById("title").style.display = "none"
+document.querySelector(".buttons").style.display = "none"
+document.getElementById("viewer").style.width = "100%"
+document.getElementById("viewer").style.height = "100vh"
+}
+
+if(hash === "#barite"){
+showBarite()
+fullscreenModel()
+}
+
+else if(hash === "#potash"){
+showPotash()
+fullscreenModel()
+}
+
+else{
+showBarite()
+}
+
 }
